@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useReducer, useRef, useState } from "react"
+import { useCallback, useMemo, useReducer, useRef } from "react"
 import Button from "../ui/button.ui"
 import './Timer.css'
 import soundfile from '../../assets/music/ring.mp3'
@@ -26,7 +26,7 @@ const formatMinutes = (minutes: number) => String(minutes).padStart(2, '0');
 const formatSeconds = (totalSeconds: number) => String(totalSeconds % 60).padStart(2, '0');
 
 const getTimeRemaning = (deadline: number) => {
-    let time = deadline - new Date().getTime()
+    const time = deadline - new Date().getTime()
     return {
         minutes: Math.floor((time / 1000 / 60) % 60),
         seconds: Math.floor(time / 1000 % 60)
