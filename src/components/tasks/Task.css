@@ -1,0 +1,71 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: .3px solid rgba(0, 9, 61, 0.224);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.fade-item{
+    opacity: 0;
+}
+
+.task:hover {
+    background-color: rgba(103, 103, 103, 0.033);
+}
+
+.task-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    flex: 10 0 80%;
+    color: rgb(0, 0, 0);
+}
+
+.btn-block {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1 0 auto;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 5px;
+    background-color: transparent;
+}
+
+.btn-edit {
+    color: #aaaaaa;
+}
+
+.btn-delete {
+    color: #f44336a4;
+}
+
+.task-no-active {
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+
+.fade-item {
+    transition: 2s all ease-in-out;
+    opacity: 0;
+}
+
+.fadein {
+    animation: fadeIn 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,12 @@
+.task-wrapp{
+    display: flex;
+    width: 100%;
+    max-width: 640px;
+    flex-direction: column;
+}
+
+.no-tasks{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #aaaaaa;
+}
